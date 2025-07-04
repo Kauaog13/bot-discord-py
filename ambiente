@@ -1,21 +1,54 @@
-## Crie um ambiente virtual
-python -m venv venv
-.\venv\Scripts\activate
+## Crie uma nova aplicação no discord
 
-## Terminal
+> Se registre e logue:
+1. https://discord.com/developers/applications
+2. New Aplication > 'Nome da sua aplicação'
+
+## Crie um bot, ative as permissões e salve o token
+
+> Na Sessão lateral: 'BOT'
+1. Build-A-Bot > Username > DEFINA O NOME DO BOT
+2. Build-A-Bot > 'Reset Token' or 'Rendem Token' > COPIE O CÓDIGO E SALVE
+3. Bot Permissions > ATIVE > Administrator (8)
+4. Privileged Gateway Intents > ATIVE AS 3 OPÇÕES
+
+## Convide o bot para o seu servidor/canal
+
+> Na sessão lateral: 'Installation'
+1. Install Link > COPIE O LINK DO CONVITE > Envie para servidor desejado > Aceite o convite
+
+## Clone o reposiório
+1. git clone https://github.com/Kauaog13/bot-discord-py.git
+
+## Crie um ambiente virtual
+1. python -m venv venv
+2. .\venv\Scripts\activate
+
+## Instalando as Dependências
+
+> Bibliotecas Python
 pip install discord.py
 pip install yt-dlp
 pip install python-dotenv
 pip install pynacl
 
-## Instalar Scoop - FFmpeg:
-PowerShell: Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-PowerShell: Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
-PowerShell: scoop bucket add main
-PowerShell: scoop install ffmpeg
-Bash: ffmpeg -version
+> Instalar Scoop - FFmpeg:
+1. PowerShell: Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+2. PowerShell: Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+3. PowerShell: scoop bucket add main
+4. PowerShell: scoop install ffmpeg
+5. Bash: ffmpeg -version
 
-## Comandos do BOT
+Se aparecer a versão, TUDO OK!
+
+## Crie um arquivo .env
+DISCORD_TOKEN= SEU TOKEN DO BOT
+
+## Inicie o servidor e entre em um canal de VOZ
+1. python bot.py
+2. Entre em um canal de voz e execute os comandos
+
+## Comandos do BOT no chat do Discord
 
 ## !join
 Faz o bot entrar no canal de voz onde você está.
