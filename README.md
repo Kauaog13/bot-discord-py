@@ -24,8 +24,8 @@ Um bot de música desenvolvido em **Python** para reprodução de áudio diretam
 
 | bot.py # Arquivo principal do bot  
 | .env # Arquivo contendo o token do Discord  
-| requirements.txt # Dependências do projeto
-| ambiente.md ## Guia Passo a Passo detalhadamente de como executar o projeto
+| requirements.txt # Dependências do projeto  
+| ambiente.md # Guia Passo a Passo detalhadamente de como executar o projeto  
 
 
 ## ⚙️ Como executar o projeto
@@ -65,3 +65,6 @@ pip install -r requirements.txt
 - O bot suporta múltiplos servidores (guilds).  
 
 - Necessário o FFmpeg instalado e configurado no PATH do sistema.  
+
+- Painel Desenvolvedor do Discord: 
+**[discord .dev](https://discord.com/developers/applications)**
