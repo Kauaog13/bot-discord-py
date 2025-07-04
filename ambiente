@@ -1,0 +1,42 @@
+## Crie um ambiente virtual
+python -m venv venv
+.\venv\Scripts\activate
+
+## Terminal
+pip install discord.py
+pip install yt-dlp
+pip install python-dotenv
+pip install pynacl
+
+## Instalar Scoop - FFmpeg:
+PowerShell: Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+PowerShell: Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+PowerShell: scoop bucket add main
+PowerShell: scoop install ffmpeg
+Bash: ffmpeg -version
+
+## Comandos do BOT
+
+## !join
+Faz o bot entrar no canal de voz onde você está.
+
+## !play
+Toca uma música. Normalmente, você fornece o nome ou link da música após o comando (ex: !play nome-da-musica).
+
+## !stop
+Para a música e faz o bot sair do canal de voz.
+
+## !skip
+Pula para a próxima música na fila.
+
+## !queue
+Mostra a lista de músicas que estão na fila para tocar.
+
+## !nowplaying
+Exibe qual música está tocando no momento.
+
+## !pause
+Pausa a música atual.
+
+## !resume
+Retoma a música pausada.
