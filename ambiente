@@ -24,15 +24,16 @@
 1. python -m venv venv
 2. .\venv\Scripts\activate
 
-## Instalando as Dependências
+## Instale as Dependências
+1. pip install -r requirements.txt
 
-> Bibliotecas Python
+> Bibliotecas Python (Individual)
 pip install discord.py
 pip install yt-dlp
 pip install python-dotenv
 pip install pynacl
 
-> Instalar Scoop - FFmpeg:
+## Instalar Scoop - FFmpeg:
 1. PowerShell: Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 2. PowerShell: Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 3. PowerShell: scoop bucket add main
