@@ -1,15 +1,36 @@
 # 🎵 Bot de Música para Discord
 
-Um bot de música desenvolvido em **Python** para reprodução de áudio diretamente em canais de voz do **Discord**. O bot suporta busca e reprodução de músicas do **YouTube**, gerenciamento de fila, e comandos como `play`, `pause`, `resume`, `skip`, `stop` e mais!
+Um bot de música avançado desenvolvido em **Python** para reprodução de áudio diretamente em canais de voz do **Discord**. O bot possui arquitetura modular com Cogs, interface moderna com botões interativos, gerenciamento robusto de estado e muitas funcionalidades avançadas!
 
 ## 🚀 Funcionalidades
 
+### 🎵 Reprodução
 - ✅ Reproduz músicas via link ou termos de busca do YouTube
-- ✅ Gerencia filas de reprodução (por servidor)
-- ✅ Comandos intuitivos com prefixo `!`
-- ✅ Conecta, desconecta e move entre canais de voz
-- ✅ Suporte a múltiplos servidores ao mesmo tempo
-- ✅ Mensagens informativas no chat sobre status da reprodução
+- ✅ Busca interativa com seleção de resultados
+- ✅ Controle de volume (0-100%)
+- ✅ Sistema de loop para repetir músicas
+- ✅ Pausa, retomar, pular e parar músicas
+
+### 📋 Gerenciamento de Fila
+- ✅ Filas de reprodução independentes por servidor
+- ✅ Embaralhar fila de músicas
+- ✅ Remover músicas específicas da fila
+- ✅ Visualização paginada da fila
+- ✅ Limite de músicas na fila para evitar spam
+
+### 🎮 Interface Moderna
+- ✅ Embeds ricos com thumbnails e informações detalhadas
+- ✅ Botões interativos para controle de reprodução
+- ✅ Mensagens de status em tempo real
+- ✅ Sistema de busca com seleção por botões
+
+### 🔧 Recursos Avançados
+- ✅ Arquitetura modular com Cogs
+- ✅ Gerenciamento robusto de estado por servidor
+- ✅ Desconexão automática por inatividade
+- ✅ Tratamento avançado de erros
+- ✅ Suporte a múltiplos servidores simultaneamente
+- ✅ Recuperação automática de falhas
 
 ## 🛠 Tecnologias usadas
 
@@ -22,10 +43,21 @@ Um bot de música desenvolvido em **Python** para reprodução de áudio diretam
 
 ## 📂 Estrutura básica do projeto
 
-| bot.py # Arquivo principal do bot  
-| .env # Arquivo contendo o token do Discord  
-| requirements.txt # Dependências do projeto  
-| ambiente.md # Guia Passo a Passo detalhadamente de como executar o projeto  
+```
+📁 projeto/
+├── 📄 main.py                 # Arquivo principal do bot
+├── 📄 config.py              # Configurações centralizadas
+├── 📄 .env                   # Token e variáveis de ambiente
+├── 📄 requirements.txt       # Dependências do projeto
+├── 📄 ambiente.md           # Guia de instalação detalhado
+├── 📁 cogs/                 # Módulos do bot (Cogs)
+│   ├── 📄 music.py          # Comandos de música
+│   └── 📄 events.py         # Eventos do bot
+└── 📁 utils/                # Utilitários
+    ├── 📄 music_manager.py  # Gerenciador de estado
+    ├── 📄 embeds.py         # Criação de embeds
+    └── 📄 views.py          # Componentes de UI
+```
 
 
 ## ⚙️ Como executar o projeto
@@ -48,23 +80,60 @@ DISCORD_TOKEN=seu_token_aqui
 pip install -r requirements.txt
 ```
 
+4️⃣ **Execute o bot**
+```bash
+python main.py
+```
 ## 🎮 Comandos disponíveis
 
-- !join — Entra no seu canal de voz  
-- !leave — Sai do canal de voz  
-- !play <link ou termo> — Reproduz uma música  
-- !pause — Pausa a música atual  
-- !resume — Retoma a música pausada  
-- !stop — Para a música e limpa a fila  
-- !skip — Pula para a próxima música  
-- !queue — Mostra as músicas na fila  
-- !nowplaying — Mostra a música que está tocando
+### 🎵 Reprodução
+- `!join` — Conecta ao seu canal de voz
+- `!leave` — Desconecta do canal de voz
+- `!play <música>` — Reproduz uma música
+- `!search <termo>` — Busca e permite selecionar música
+- `!pause` — Pausa a música atual
+- `!resume` — Retoma a música pausada
+- `!skip` — Pula para a próxima música
+- `!stop` — Para a música e limpa a fila
 
+### 📋 Fila
+- `!queue` — Mostra a fila de músicas
+- `!shuffle` — Embaralha a fila
+- `!remove <número>` — Remove música da fila
+- `!nowplaying` — Mostra a música atual
+
+### 🔧 Controles
+- `!volume [0-100]` — Ajusta/mostra o volume
+- `!loop` — Ativa/desativa loop da música
+- `!help [comando]` — Mostra ajuda geral ou específica
+
+## 🎮 Controles Interativos
+
+O bot possui botões interativos nas mensagens de "Tocando Agora":
+- ⏯️ **Play/Pause** — Pausa ou retoma a música
+- ⏭️ **Skip** — Pula para a próxima música
+- ⏹️ **Stop** — Para e limpa a fila
+- 🔀 **Shuffle** — Embaralha a fila
+- 🔁 **Loop** — Ativa/desativa repetição
 ## 💡 Observações
 
-- O bot suporta múltiplos servidores (guilds).  
+- ✅ Suporte completo a múltiplos servidores
+- ✅ Estado independente para cada servidor
+- ✅ Desconexão automática após 5 minutos de inatividade
+- ✅ Limite de 50 músicas por fila para evitar spam
+- ✅ Recuperação automática de erros de reprodução
 
-- Necessário o FFmpeg instalado e configurado no PATH do sistema.  
+- ⚠️ Necessário o FFmpeg instalado e configurado no PATH do sistema
 
-- Painel Desenvolvedor do Discord: 
-**[discord .dev](https://discord.com/developers/applications)**
+- 🔗 Painel Desenvolvedor do Discord: **[discord.dev](https://discord.com/developers/applications)**
+
+## 🆕 Novidades da Versão Refatorada
+
+- 🏗️ **Arquitetura Modular**: Código organizado em Cogs para melhor manutenção
+- 🎨 **Interface Moderna**: Embeds ricos e botões interativos
+- 🔧 **Gerenciamento Robusto**: Sistema de estado avançado por servidor
+- 🛡️ **Tratamento de Erros**: Recuperação automática e mensagens claras
+- 🔍 **Busca Interativa**: Seleção de músicas com botões
+- 🎛️ **Controles Avançados**: Volume, loop, shuffle e mais
+- ⚡ **Performance**: Otimizações e melhor uso de recursos
+- 📱 **UX Melhorada**: Feedback visual e interações intuitivas
